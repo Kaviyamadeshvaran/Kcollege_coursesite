@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Kaviya College of Engineering</title>
+    <link rel="stylesheet" href="styles1.css">
+   <script>let selectedCount = 0;
+    const maxSelections = 5;
+    
+    function selectDepartment(button, departmentId) {
+        // Hide all department subjects
+        const allSubjects = document.querySelectorAll('.course-list');
+        allSubjects.forEach(list => list.style.display = 'none');
+    
+        // Show the selected department's subjects
+        const departmentSubjects = document.getElementById(departmentId);
+        departmentSubjects.style.display = 'block';
+    
+        // Deselect all department buttons
+        const departmentButtons = document.querySelectorAll('.department-btn');
+        departmentButtons.forEach(btn => {
+            if (btn !== button) {
+                btn.disabled = true;
+                btn.classList.remove('selected'); // Ensure unselected departments are not marked as selected
+            } else {
+                btn.classList.add('selected');
+                btn.disabled = true;
+            }
+        });
+    
+        // Reset selected courses count
+        selectedCount = 0;
+    
+        // Reset selected state of all course buttons
+        const courseButtons = document.querySelectorAll(`#${departmentId} .select-btn`);
+        courseButtons.forEach(btn => {
+            btn.classList.remove('selected');
+            btn.textContent = 'Select';
+        });
+    }
+    
+    function selectCourse(button) {
+        const departmentId = document.querySelector('.department-btn.selected')?.getAttribute('onclick').split(',')[1].trim().slice(1, -1);
+        if (!departmentId) {
+            alert('Please select a department first.');
+            return;
+        }
+    
+        if (button.classList.contains('selected')) {
+            button.classList.remove('selected');
+            button.textContent = 'Select';
+            selectedCount--;
+        } else {
+            if (selectedCount < maxSelections) {
+                button.classList.add('selected');
+                button.textContent = 'Selected';
+                selectedCount++;
+            } else {
+                alert('You can select a maximum of 5 courses.');
+            }
+        }
+    }
+    </script>
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="courses">
+            <h1>Select Department</h1>
+            <div class="departments">
+                <button class="department-btn" onclick="selectDepartment(this, 'comp-sci')">Computer Science</button>
+                <button class="department-btn" onclick="selectDepartment(this, 'mech-eng')">Mechanical Engineering</button>
+                <button class="department-btn" onclick="selectDepartment(this, 'civil-eng')">Civil Engineering</button>
+            </div>
+
+            <!-- Computer Science Subjects -->
+            <div id="comp-sci" class="course-list" style="display: none;">
+                <h2>Computer Science Subjects</h2>
+                <!-- Add 10 subjects with buttons similar to the following example -->
+                <div class="course-box">
+                    <h3>Algorithms</h3>
+                    <p>Learn about algorithmic problem solving techniques and data structures.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Data Structures</h3>
+                    <p>Study various data structures like arrays, linked lists, and trees.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Operating Systems</h3>
+                    <p>Understand the principles of operating systems and their functionalities.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Software Engineering</h3>
+                    <p>Learn about software development processes and methodologies.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Database Systems</h3>
+                    <p>Explore database design, management, and query languages.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Computer Networks</h3>
+                    <p>Study networking concepts, protocols, and security.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Artificial Intelligence</h3>
+                    <p>Introduction to AI concepts, machine learning, and neural networks.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Web Development</h3>
+                    <p>Learn about building and designing websites and web applications.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Human-Computer Interaction</h3>
+                    <p>Study how people interact with computers and design user-friendly interfaces.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Computer Graphics</h3>
+                    <p>Understand the principles of computer graphics and visualization.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+
+            </div>
+
+            <!-- Mechanical Engineering Subjects -->
+            <div id="mech-eng" class="course-list" style="display: none;">
+                <h2>Mechanical Engineering Subjects</h2>
+                <!-- Add 10 subjects with buttons similar to the following example -->
+                <div class="course-box">
+                    <h3>Thermodynamics</h3>
+                    <p>Study the principles of heat and energy transfer.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Fluid Mechanics</h3>
+                    <p>Learn about the behavior of fluids and their applications.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Mechanics of Materials</h3>
+                    <p>Understand the response of materials to mechanical forces.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Manufacturing Processes</h3>
+                    <p>Study various methods and technologies used in manufacturing.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Machine Design</h3>
+                    <p>Learn about the design and analysis of mechanical components and systems.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Heat Transfer</h3>
+                    <p>Study the principles and applications of heat transfer in engineering.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Dynamics</h3>
+                    <p>Understand the motion of bodies and forces causing the motion.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Control Systems</h3>
+                    <p>Learn about the design and analysis of control systems in engineering.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Robotics</h3>
+                    <p>Introduction to robotics, including design, control, and applications.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Vibration Analysis</h3>
+                    <p>Study the analysis and control of vibrations in mechanical systems.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+            </div>
+
+            <!-- Civil Engineering Subjects -->
+            <div id="civil-eng" class="course-list" style="display: none;">
+                <h2>Civil Engineering Subjects</h2>
+                <!-- Add 10 subjects with buttons similar to the following example -->
+                <div class="course-box">
+                    <h3>Structural Analysis</h3>
+                    <p>Study the analysis of structures to ensure they can withstand loads.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Geotechnical Engineering</h3>
+                    <p>Learn about soil mechanics and its applications in civil engineering.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Transportation Engineering</h3>
+                    <p>Study the design and planning of transportation systems.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Water Resources Engineering</h3>
+                    <p>Learn about the management and development of water resources.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Environmental Engineering</h3>
+                    <p>Focuses on designing systems to improve environmental quality.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Construction Management</h3>
+                    <p>Learn about managing construction projects and resources.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Building Materials</h3>
+                    <p>Study the properties and applications of various building materials.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Urban Planning</h3>
+                    <p>Learn about the development and planning of urban areas.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Hydraulics</h3>
+                    <p>Study the behavior of fluids in motion and at rest.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+                <div class="course-box">
+                    <h3>Construction Technology</h3>
+                    <p>Learn about the latest technologies used in construction practices.</p>
+                    <button class="select-btn" onclick="selectCourse(this)">Select</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Kaviya College of Engineering. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,484 @@
+/* About Page Styles */
+.about {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 5px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.about h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Translucent Box Styles */
+.intro-box {
+    background-color: transparent; /* Translucent black background */
+    color: black;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 90%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: x-large;
+}
+
+/* Intro Section Styles */
+.intro {
+    position: relative;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.intro-video {
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Features Section Styles */
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.feature {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 30%;
+}
+
+.feature img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    margin: 10px 0;
+}
+
+.feature p {
+    color: #555;
+}
+
+/* Footer Styles */
+/* footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+} */
+footer {
+    padding: 10px; /* Adjust the padding as needed */
+    font-size: 14px; /* Adjust the font size */
+    text-align: center;
+    background-color: #f8f9fa; /* Optional: Adjust the background color */
+}
+
+
+.courses {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.courses h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.course-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.course-box h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.course-box p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.select-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.select-btn:hover {
+    background-color: #45a049;
+}
+
+.select-btn.selected {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Courses Page Styles */
+.courses {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.courses h1, .courses h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.course-list {
+    margin-bottom: 40px;
+}
+
+.course-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.course-box h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.course-box p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.select-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.select-btn:hover {
+    background-color: #45a049;
+}
+
+.select-btn.selected {
+    background-color: #333;
+    color: #fff;
+}
+
+.courses {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.courses h1, .courses h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.departments {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.department-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.department-btn:hover {
+    background-color: #45a049;
+}
+
+.department-btn.selected {
+    background-color: #333;
+}
+
+.course-list {
+    display: none;
+    margin-bottom: 40px;
+}
+
+.course-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.course-box h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.course-box p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.select-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.select-btn:hover {
+    background-color: #45a049;
+}
+
+.select-btn.selected {
+    background-color: #333;
+    color: #fff;
+}
+/* Existing CSS styles */
+
+/* Add the new CSS styles here */
+.courses {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.courses h1, .courses h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* More CSS styles... */
+
+.select-btn.selected {
+    background-color: #333;
+    color: #fff;
+}
+/* Existing CSS styles */
+
+/* Style for the course selection section */
+.courses {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.courses h1, .courses h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.department-btn {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.department-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.department-btn.selected {
+    background-color: #0056b3;
+}
+
+.course-list {
+    display: none;
+    margin-top: 20px;
+}
+
+.course-box {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.course-box h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.course-box p {
+    margin: 10px 0;
+}
+
+.select-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+}
+
+.select-btn.selected {
+    background-color: #dc3545;
+}
+.select-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745; /* Default color */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.select-btn.selected {
+    background-color: #dc3545; /* Selected color */
+}
+.department-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Default color */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.department-btn.selected {
+    background-color: #6c757d; /* Selected color */
+}
+
+.department-btn:disabled {
+    background-color: #d6d6d6; /* Disabled color */
+    cursor: not-allowed;
+}
+
+.contact-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  .contact-box p {
+    margin-bottom: 10px;
+  }
+  
+  .contact-box ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .about-image {
+    width: 160px; /* Adjust width as needed */
+    height: 250px; /* Adjust height as needed */
+    display: block; /* Ensure the image behaves like a block-level element */
+    margin: 0 auto; /* Center the image horizontally */
+  }
+
+  .about h3 { /* Targets the h3 element within the .about section */
+    color: rgb(232, 14, 14); /* Sets the text color to light gray */
+    text-align: center; /* Centers the text horizontally */
+    margin-top: 10px; /* Adds some space between the image and the text */
+  }
+
+
